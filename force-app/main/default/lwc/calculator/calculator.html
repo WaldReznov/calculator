@@ -1,0 +1,52 @@
+<!--
+ - Created by vershov on 28.01.2020.
+ -->
+
+<!-- Calculator -->
+<template>
+
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="output-container">
+                <div class="output">{result}</div>
+            </div>
+            <div class="calculator-action">
+                <div class="calculator-action-row">
+                    <div class="calculator-action-row-cell expand-x red" onclick={clearResult}>AC</div>
+                    <div class="calculator-action-row-cell action" onclick={addOperator}>/</div>
+                    <div class="calculator-action-row-cell action" onclick={addOperator}>*</div>
+                </div>
+                <div class="calculator-action-row">
+                    <div class="calculator-action-row-cell" onclick={addDigital}>7</div>
+                    <div class="calculator-action-row-cell" onclick={addDigital}>8</div>
+                    <div class="calculator-action-row-cell" onclick={addDigital}>9</div>
+                    <div class="calculator-action-row-cell action" onclick={addOperator}>-</div>
+                </div>
+                <div class="calculator-action-row">
+                    <div class="calculator-action-row-cell" onclick={addDigital}>4</div>
+                    <div class="calculator-action-row-cell" onclick={addDigital}>5</div>
+                    <div class="calculator-action-row-cell" onclick={addDigital}>6</div>
+                    <div class="calculator-action-row-cell action" onclick={addOperator}>+</div>
+                </div>
+                <div class="calculator-action-row">
+                    <div class="calculator-action-reverse-item">
+                        <div class="calculator-action-row">
+                            <div class="calculator-action-row-cell" onclick={addDigital}>1</div>
+                            <div class="calculator-action-row-cell" onclick={addDigital}>2</div>
+                            <div class="calculator-action-row-cell" onclick={addDigital}>3</div>
+                        </div>
+                        <div class="calculator-action-row">
+                            <div class="calculator-action-row-cell expand-x" onclick={addDigital}>0</div>
+                            <div class="calculator-action-row-cell" onclick={addDot}>.</div>
+                        </div>
+                    </div>
+
+                    <div class="calculator-action-reverse-item">
+                        <div class="calculator-action-row-cell expand-y action" onclick={calculate}>=</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>

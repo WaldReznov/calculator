@@ -1,0 +1,111 @@
+/**
+ * Created by vershov on 28.01.2020.
+ */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.calculator-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s all;
+    font-size: 20px;
+}
+
+.calculator {
+    background: rgb(255,255,255);
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    box-shadow: 0px 0px 20px 0px #aaa;
+}
+
+.calculator-action{
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-action-row{
+    width: 100%;
+    display: flex;
+}
+
+.output{
+    background: black;
+    width: 100%;
+    text-align: right;
+    height: 60px;
+    white-space: nowrap;
+    font-size: 34px;
+    color: white;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.output-container{
+    width: 100%;
+}
+
+.expand-x{
+    flex-grow: 1;
+}
+
+.expand-y{
+    height: 100%;
+}
+
+.calculator-action-row:first-child > .calculator-action-row-cell:first-child {
+    border-right: 1px solid #777;
+}
+
+.calculator-action-row > .calculator-action-row-cell{
+    cursor: pointer;
+    border-right: 1px solid #777;
+    border-top: 1px solid #777;
+}
+
+.calculator-action > .calculator-action-row > .calculator-action-row-cell:last-child {
+    border-right: none;
+}
+
+
+.calculator-action-row-cell{
+    border-top: 1px solid #777;
+    min-height: 100px;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red{
+    background: rgb(172, 57, 57);
+    color: white;
+}
+
+.action{
+    background: linear-gradient(to bottom, rgba(252,156,23,1) 0%, rgba(247,126,27,1) 100%);
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 440px) {
+    .calculator{
+        width: 320px;
+    }
+
+    .calculator-action-row-cell{
+        min-height: 80px;
+        min-width: 80px;
+    }
+}
